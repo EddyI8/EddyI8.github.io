@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abyssal Atelier — Underwater Art Toy</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✧</span> ABYSSAL <span>ATELIER</span></a>
+  <div class="top-right"><span class="live-dot"></span> THE DEEP IS YOUR CANVAS</div>
+</header>
+
+<main class="shell">
+  <section class="intro">
+    <div class="eyebrow"><span>✦</span> A LITTLE MAGIC FROM THE OCEAN FLOOR</div>
+    <h1>Paint with the<br><em>colors of the deep.</em></h1>
+    <p>Choose a color from your imagination. Watch it bloom into a strange, beautiful underwater kingdom — every creation is one of a kind.</p>
+  </section>
+
+  <section class="studio">
+    <div class="controls">
+      <div class="control-heading"><span class="number">01</span><div><h2>Choose your tide</h2><p>Pick a color to begin your spell.</p></div></div>
+      <div class="color-picker-wrap">
+        <input id="colorPicker" type="color" value="#40d9c2" aria-label="Choose an art color">
+        <div class="picked-copy"><span>YOUR COLOR</span><strong id="hexValue">#40D9C2</strong></div>
+      </div>
+      <div class="swatches-label">OR TRY A SEA-SOUL PALETTE</div>
+      <div class="swatches">
+        <button class="swatch selected" data-color="#40d9c2" style="--swatch:#40d9c2" aria-label="Lagoon teal" title="Lagoon teal"></button>
+        <button class="swatch" data-color="#ff7eaa" style="--swatch:#ff7eaa" aria-label="Coral bloom" title="Coral bloom"></button>
+        <button class="swatch" data-color="#a58aff" style="--swatch:#a58aff" aria-label="Abyssal violet" title="Abyssal violet"></button>
+        <button class="swatch" data-color="#ffca68" style="--swatch:#ffca68" aria-label="Sunken gold" title="Sunken gold"></button>
+        <button class="swatch" data-color="#6db8ff" style="--swatch:#6db8ff" aria-label="Glacier blue" title="Glacier blue"></button>
+        <button class="swatch" data-color="#a8e66a" style="--swatch:#a8e66a" aria-label="Kelp green" title="Kelp green"></button>
+      </div>
+      <div class="control-divider"></div>
+      <div class="control-heading"><span class="number">02</span><div><h2>Shape the magic</h2><p>Give your underwater world a mood.</p></div></div>
+      <label class="field-label" for="mood">KINGDOM MOOD</label>
+      <select id="mood">
+        <option value="dream">Dreaming reef</option>
+        <option value="mystic">Mystic trench</option>
+        <option value="royal">Coral palace</option>
+        <option value="wild">Kelp forest</option>
+      </select>
+      <label class="field-label" for="density">MAGIC DENSITY <span id="densityLabel">Balanced</span></label>
+      <input id="density" class="range" type="range" min="1" max="5" value="3">
+      <button id="createBtn" class="create-button"><span>✧</span> Create my sea-world <span>↗</span></button>
+      <button id="surpriseBtn" class="surprise-button">✦ Surprise me with a color</button>
+      <p class="small-note">Each click creates a fresh piece of generative art. Made of pixels, patterns, and a little sea-magic.</p>
+    </div>
+
+    <div class="art-side">
+      <div class="art-toolbar"><div><span class="art-kicker">YOUR ONE-OF-A-KIND CREATION</span><h2 id="artTitle">The Lagoon Oracle</h2></div><button id="downloadBtn" class="icon-button" title="Save artwork as PNG" aria-label="Download artwork">↓</button></div>
+      <div class="canvas-frame">
+        <canvas id="artCanvas" width="900" height="720" aria-label="Generative underwater abstract artwork"></canvas>
+        <div class="canvas-stamp">ABYSS<br>NO. <span id="artNumber">001</span></div>
+      </div>
+      <div class="art-caption"><span><i></i> GENERATED IN YOUR OCEAN</span><span id="paletteName">LAGOON TEAL · DREAMING REEF</span></div>
+      <div class="bottom-note"><span class="star">✦</span><p><strong>No two tides are alike.</strong><br>Change your color or mood to discover another hidden kingdom.</p></div>
+    </div>
+  </section>
+  <footer><span>ABYSSAL ATELIER</span><span>AN EXPERIMENT IN COLOR & CURIOSITY</span><span>✧ MADE UNDER THE SEA ✧</span></footer>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
